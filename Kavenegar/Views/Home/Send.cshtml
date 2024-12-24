@@ -1,0 +1,50 @@
+﻿@model Kavenegar.Models.SendResult
+@{
+    ViewBag.Title = "Send";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="container">
+        <h1>@ViewBag.Title</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">متد</th>
+                    <th scope="col">لینک</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>messageid</td>
+                    <td>@Model.Messageid</td>
+                </tr>
+                <tr>
+                    <td>message</td>
+                    <td>@Model.Message</td>
+                </tr>
+                <tr>
+                    <td>status</td>
+                    <td>@Model.Status</td>
+                </tr>
+                <tr>
+                    <td>statustext</td>
+                    <td>@Model.StatusText</td>
+                </tr>
+                <tr>
+                    <td>sender</td>
+                    <td>@Model.Sender</td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td>@(new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(Model.Date).ToLocalTime())</td>
+                </tr>
+                <tr>
+                    <td>cost</td>
+                    <td>@Model.Cost</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+

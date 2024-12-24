@@ -7,8 +7,10 @@
     <link href="~/Content/bootstrap.rtl.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <a href="@Url.Action("Index","Home")">خانه</a>
+    <header class="nav">
+        <a href="@Url.Action("Index","Home")" class="nav nav-link">خانه</a>
+        <a href="https://lightcompany.ir/contact-us/" class="nav nav-link">تماس با ما</a>
+        <a href="https://lightcompany.ir/about-us/" class="nav nav-link">درباره ما</a>
     </header>
     @RenderBody()
     <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">

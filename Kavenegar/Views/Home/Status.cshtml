@@ -1,0 +1,33 @@
+﻿@model Kavenegar.Models.StatusResult
+@{
+    ViewBag.Title = "Status";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <div class="container">
+        <h1>@ViewBag.Title</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">متد</th>
+                    <th scope="col">لینک</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>messageid</td>
+                    <td>@Model.Messageid</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>@Model.Status</td>
+                </tr>
+                <tr>
+                    <td>statustext</td>
+                    <td>@Model.Statustext</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+

@@ -3,31 +3,156 @@
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">متد</th>
+                    <th scope="col">لینک</th>
+                    <th class="text-wrap" scope="col">توضیح</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">SEND</th>
+                    <td>
+                        <a href="@Url.Action("Index","Home")">ارسال ساده</a>
+                    </td>
+                    <td class="text-wrap">ارسال پیامک استفاده می کنیم که امکان ارسال یک پیامک خاص به چندین گیرنده (Receptor) در این متد وجود دارد کافیست آنها را از طریق کاراکتر ویرگول « , » از هم جدا کنید.</td>
+                </tr>
+                <tr>
+                    <th scope="row">SendArray</th>
+                    <td>
+                        <a href="@Url.Action("SendArray","Home")">ارسال گروهی</a>
+                    </td>
+                    <td class="text-wrap">چندین پیامک مختلف را از شماره های مختلف ارسال کنید</td>
+                </tr>
+                <tr>
+                    <th scope="row">Status</th>
+                    <td>
+                        <a href="@Url.Action("Status","Home")">کنترل وضعیت</a>
+                    </td>
+                    <td class="text-wrap">از این تابع برای کنترل وضعیت رسید Delivery پیامک استفاده می‌شود. برای این منظور باید شناسه یکتای هر پیامک messageid را که در هنگام ارسال پیامک از خروجی دریافت کرده اید را ارسال نمائید.</td>
+                </tr>
+                <tr>
+                    <th scope="row">SEND</th>
+                    <td>
+                        <a href="@Url.Action("Index","Home")">ارسال</a>
+                    </td>
+                    <td class="text-wrap">info</td>
+                </tr>
+                <tr>
+                    <th scope="row">SEND</th>
+                    <td>
+                        <a href="@Url.Action("Index","Home")">ارسال</a>
+                    </td>
+                    <td class="text-wrap">info</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>خطاها</h2>
+        <p>خطاهای احتمالی دریافتی</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">کد خطا</th>
+                    <th scope="col">متن</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">401</th>
+                    <td>حساب کاربری غیر فعال است</td>
+                </tr>
+                <tr>
+                    <th scope="row">403</th>
+                    <td>حساب کاربری معتبر نمی‌باشد. این خطا در صورتی که کد شناسائی API-Key اشتباه ارسال شود رخ می‌دهد</td>
+                </tr>
+                <tr>
+                    <th scope="row">400</th>
+                    <td>پارامترها ناقص هستند</td>
+                </tr>
+                <tr>
+                    <th scope="row">402</th>
+                    <td>عملیات ناموفق بود</td>
+                </tr>
+                <tr>
+                    <th scope="row">404</th>
+                    <td>متدی با این نام پیدا نشده است</td>
+                </tr>
+                <tr>
+                    <th scope="row">405</th>
+                    <td>متد فراخوانی Get یا Post اشتباه است</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>سرور قادر به پاسخگوئی نیست بعدا تلاش کنید</td>
+                </tr>
+                <tr>
+                    <th scope="row">طول پیامک</th>
+                    <td>معادل 70 کاراکتر برای یک پیامک فارسی و 140 کاراکتر برای یک پیامک لاتین</td>
+                </tr>
+                <tr>
+                    <th scope="row">ﺣﺪاﻛﺜﺮ ﻃﻮل پیامک</th>
+                    <td>حداکثر طول کل متن پیامک 900 کاراکتر می باشد.</td>
+                </tr>
+                <tr>
+                    <th scope="row">413</th>
+                    <td>متن پیام خالی است و یا طول آن بیشتر از حد مجاز می‌باشد</td>
+                </tr>
+                <tr>
+                    <th scope="row">414</th>
+                    <td>حجم درخواست بیشتر از حد مجاز است.در ارسال پیامک هر فراخوانی 200 رکورد و کنترل وضعیت هر فراخوانی 500 رکورد</td>
+                </tr>
+                <tr>
+                    <th scope="row">411</th>
+                    <td>شماره گیرنده پیام معتبر نمی باشد</td>
+                </tr>
+                <tr>
+                    <th scope="row">412</th>
+                    <td>شماره فرستنده معتبر نمی‌باشد</td>
+                </tr>
+                <tr>
+                    <th scope="row">417</th>
+                    <td>تاریخ ارسال اشتباه است یا تاریخ آن گذشته و یا به فرمت درست ارسال نشده است</td>
+                </tr>
+                <tr>
+                    <th scope="row">418</th>
+                    <td>اعتبار حساب شما کافی نیست</td>
+                </tr>
+                <tr>
+                    <th scope="row">419</th>
+                    <td>تعداد اعضای آرایه متن و گیرنده و ارسال کننده هم اندازه نیست .</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>Mark</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>Mark</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>Mark</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>Mark</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>Mark</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>Mark</td>
+                </tr>
+                <tr>
+                    <th scope="row">409</th>
+                    <td>Mark</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </main>
