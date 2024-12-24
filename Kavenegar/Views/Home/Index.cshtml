@@ -35,18 +35,46 @@
                     <td class="text-wrap">از این تابع برای کنترل وضعیت رسید Delivery پیامک استفاده می‌شود. برای این منظور باید شناسه یکتای هر پیامک messageid را که در هنگام ارسال پیامک از خروجی دریافت کرده اید را ارسال نمائید.</td>
                 </tr>
                 <tr>
-                    <th scope="row">SEND</th>
+                    <th scope="row">Select</th>
                     <td>
-                        <a href="@Url.Action("Index","Home")">ارسال</a>
+                        <a href="@Url.Action("Select","Home")">انتخاب پیامک</a>
                     </td>
-                    <td class="text-wrap">info</td>
+                    <td class="text-wrap">در صورتی که می‌خواهید اطلاعات پیامک ارسالی را بازیابی نمائید، می‌توانید با messageid و استفاده از این متد اطلاعات رکورد را دریافت کنید.</td>
                 </tr>
                 <tr>
-                    <th scope="row">SEND</th>
+                    <th scope="row">Receive</th>
                     <td>
-                        <a href="@Url.Action("Index","Home")">ارسال</a>
+                        <a href="@Url.Action("Receive","Home")">دریافت پیامک</a>
                     </td>
-                    <td class="text-wrap">info</td>
+                    <td class="text-wrap">پیامک های دریافتی خط مورد نظر را واکشی کنید</td>
+                </tr>
+                <tr>
+                    <th scope="row">CountInbox</th>
+                    <td>
+                        <a href="@Url.Action("CountInbox","Home")">تعداد پیامک های دریافت شده</a>
+                    </td>
+                    <td class="text-wrap">دریافت تعداد پیامک های دریافت شده به کلیه خطوط اختصاصی یا یک خط خاص در بازه زمانی .</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lookup</th>
+                    <td>
+                        <a href="@Url.Action("Lookup","Home")">اعتبار سنجی</a>
+                    </td>
+                    <td class="text-wrap">این متد بالاترین اولویت را دارند و هیچ کدام از پیامک های آن فیلتر نخواهند شد( ارسال پیامک به افرادی که پیامک تبلیغاتی خود را بسته اند) همچنین این متد قابلیت ارسال پیامک به ۱۴۸ کشور دنیا را دارد.</td>
+                </tr>
+                <tr>
+                    <th scope="row">TTS</th>
+                    <td>
+                        <a href="@Url.Action("TTS","Home")">تماس صوتی</a>
+                    </td>
+                    <td class="text-wrap">از این متد برای ارسال تماس صوتی استفاده می کنیم، امکان ارسال یک تماس صوتی خاص به چندین گیرنده ( Receptor ) در این متد وجود دارد کافیست آنها را از طریق کاراکتر ویرگول « , » از هم جدا کنید .</td>
+                </tr>
+                <tr>
+                    <th scope="row">Info</th>
+                    <td>
+                        <a href="@Url.Action("Info","Home")">دریافت اطلاعات حساب کاربری</a>
+                    </td>
+                    <td class="text-wrap">این متد برای دریافت اطلاعات حساب خود و یا مشتریان ایجاد شده توسط شما استفاده می‌شود. دریافت اعتبار باقی مانده و تاریخ یکی از مهم ترین فیلدهای خروجی این متد است.</td>
                 </tr>
             </tbody>
         </table>
@@ -123,34 +151,6 @@
                 <tr>
                     <th scope="row">419</th>
                     <td>تعداد اعضای آرایه متن و گیرنده و ارسال کننده هم اندازه نیست .</td>
-                </tr>
-                <tr>
-                    <th scope="row">409</th>
-                    <td>Mark</td>
-                </tr>
-                <tr>
-                    <th scope="row">409</th>
-                    <td>Mark</td>
-                </tr>
-                <tr>
-                    <th scope="row">409</th>
-                    <td>Mark</td>
-                </tr>
-                <tr>
-                    <th scope="row">409</th>
-                    <td>Mark</td>
-                </tr>
-                <tr>
-                    <th scope="row">409</th>
-                    <td>Mark</td>
-                </tr>
-                <tr>
-                    <th scope="row">409</th>
-                    <td>Mark</td>
-                </tr>
-                <tr>
-                    <th scope="row">409</th>
-                    <td>Mark</td>
                 </tr>
             </tbody>
         </table>

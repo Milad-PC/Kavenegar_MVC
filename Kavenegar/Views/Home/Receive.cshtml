@@ -1,0 +1,46 @@
+﻿@model List<Kavenegar.Models.ReceiveResult>
+@{
+    ViewBag.Title = "Receive";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="container">
+        <h1>@ViewBag.Title</h1>
+        @foreach (Kavenegar.Models.ReceiveResult item in Model)
+        {
+            <h1>#</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">متد</th>
+                        <th scope="col">لینک</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>messageid</td>
+                        <td>@item.MessageId</td>
+                    </tr>
+                    <tr>
+                        <td>sender</td>
+                        <td>@item.Sender</td>
+                    </tr>
+                    <tr>
+                        <td>message</td>
+                        <td>@item.Message</td>
+                    </tr>
+                    <tr>
+                        <td>receptor</td>
+                        <td>@item.Receptor</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>@(new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(item.Date).ToLocalTime())</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    </div>
+</main>
+

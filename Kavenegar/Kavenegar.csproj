@@ -176,6 +176,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Send.cshtml" />
     <Content Include="Views\Home\Status.cshtml" />
+    <Content Include="Views\Home\Receive.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
